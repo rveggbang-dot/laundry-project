@@ -1,0 +1,48 @@
+/* HERO SECTION FIX */
+.hero {
+  width: 100%;
+  height: 100vh;                          /* Full satu layar */
+  background: url("../assets/hero.jpg") 
+    no-repeat center center / cover;      /* Full & rapi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0;                         /* Tidak perlu padding */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);          /* Overlay tipis */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+}
